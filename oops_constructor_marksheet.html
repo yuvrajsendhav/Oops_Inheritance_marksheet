@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Marksheet</title>
+</head>
+<body>
+   <script>
+       class Marksheet
+       {
+           constructor (a,b,c)
+           {
+               this.total=a+b+c;
+               this.pr=this.total/3;
+           
+           this.hi=function()
+           {
+            document.write("per="+this.pr+"<br>");
+           }
+           this.si=function()
+           {
+           if(this.pr>=60)
+{
+document.write("1st div");
+}
+else if(this.pr>=50)
+{
+
+document.write("2nd div");
+}
+
+else if(this.pr>=40)
+{
+ document.write("3rd div");
+}
+           
+           
+
+    
+
+}
+}
+}
+       
+var p,c,m,pr;
+p=parseInt(prompt("Enter p"));
+c=parseInt(prompt("Enter c"));
+m=parseInt(prompt("Enter m"));
+let x=new Marksheet(p,c,m);
+x.hi();
+x.si();
+
+       
+</script> 
+</body>
+</html>
