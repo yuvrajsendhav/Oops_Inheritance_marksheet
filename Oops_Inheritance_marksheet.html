@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Marksheet</title>
+</head>
+<body>
+    <script>
+        class student
+       {
+           constructor()
+           
+               {var p,c,m;}
+           
+           getdata()
+           {
+            this.name=prompt("Enter Your Name");
+             this.roll=parseInt(prompt("Enter Roll No."));
+             this.branch=prompt("Enter Your Branch"); 
+            this.p=parseInt(prompt("Enter Phy marks"));
+            this.c=parseInt(prompt("Enter che marks"));
+            this.m=parseInt(prompt("Enter math marks")); 
+           }
+        
+       }
+          class child extends student
+          {
+              constructor()
+             { super();
+                var tot,per;
+          
+             }
+             cal ()
+          {
+          this.tot=this.p+this.c+this.m;
+          this.per=this.tot/3;
+          }
+
+          showdata()
+          {
+               document.write(`Student Roll number ${this.roll}`+"<br>");
+               document.write(`Name of Student ${this.name}`+"<br>");
+               document.write(`Branch:${this.branch}`+"<br>");
+               document.write(`Total Marks ${this.tot}`+"<br>");
+               document.write(`Total Percentage ${this.per}`);
+          }
+        }
+        let s1= new child();
+        s1.getdata();
+        s1.cal();
+        s1.showdata();
+    </script>
+</body>
+</html>
